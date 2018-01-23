@@ -34,6 +34,10 @@ describe('AngularJS User Registration and Login App', function (){
 		objReg.clickRegisterButton();
 		
 	});
+	
+	it('should have registration success message', function(){
+		expect(objReg.getRegistrationSuccessMessage()).toEqual('Registration successful');
+	});
 		
 	
 	
