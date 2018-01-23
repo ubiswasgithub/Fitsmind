@@ -11,6 +11,7 @@ var RegistrationPage = function (){
 	var registerbutton = element(by.className('btn-primary'));
 	var cancel = element(by.className('btn-link'));	
 	var registerlabel = element(by.css('h2'));
+	var registrationSuccess = element(by.binding('flash.message'));
 	
 	
 	
@@ -52,6 +53,10 @@ var RegistrationPage = function (){
 		objBase.browserPuase(browser);
 		
 	};
+	
+	this.getRegistrationSuccessMessage = function(){
+		return registrationSuccess.getText();
+	}
 	
 	
 };
